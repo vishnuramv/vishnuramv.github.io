@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "vishnuram-portfolio",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Vishnu Ram's Portfolio",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Vishnu Ram V <vishhnu.v1902@gmail.com>",
   "dependencies": {
     "gatsby": "^2.25.3",
     "gatsby-image": "^2.4.21",

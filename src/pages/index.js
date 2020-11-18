@@ -1,21 +1,16 @@
-import React from "react"
 import { Link } from "gatsby"
-
+import React from "react"
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
-
+import ConstructionImage from "../images/undraw_under_construction_46pa.svg"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+    <div className="body">
+      <img src={ConstructionImage} alt="under Construction" />
+      <h4>Website Under Construction</h4>
+      <h2>You can view my work at <Link to="https://www.github.com/vishnuramv/">Github</Link> and Contact me at <Link to="https://www.linkedin.com/in/vishnu1902/" >LinkedIn</Link> or <Link to="https://www.instagram.com/vvishnu___/">Instagram</Link></h2>
     </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
   </Layout>
 )
 

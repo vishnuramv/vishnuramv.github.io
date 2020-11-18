@@ -1,9 +1,32 @@
+.body {
+  background-color: #222;
+  color: white;
+  min-height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.body img {
+  min-width: 280px;
+  width: 70%;
+  max-width: 680px;
+  object-fit: contain;
+}
+
+.body a {
+  color: #0059ff;
+}
+
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   font: 112.5%/1.45em georgia, serif, sans-serif;
   box-sizing: border-box;
-  overflow-y: scroll;
+  overflow-y: hidden;
 }
 body {
   margin: 0;
