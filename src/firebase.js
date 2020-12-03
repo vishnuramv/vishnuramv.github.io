@@ -23,5 +23,5 @@ export default function getFirebase() {
 }
 
 
-const db = firebaseApp.firestore();
-export default db;
+// const db = firebaseApp.firestore();
+// export default db;

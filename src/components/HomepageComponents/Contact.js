@@ -24,7 +24,7 @@ const Contact = ({ onCursor }) => {
                 email: email,
                 message: message,
             }).then(() => { setIsSent(true); console.log("message sent") });
-            setName("");
+            setName(""); 
             setEmail("");
             setMessage("");
             setIsEmpty(false);
