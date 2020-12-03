@@ -38,7 +38,7 @@ const Projects = () => {
             y: 0,
             opacity: 1,
             transition: {
-                duration: 1,
+                duration: 0.6,
                 ease: [.6, .05, -.01, .9]
             },
         },
@@ -54,7 +54,7 @@ const Projects = () => {
                 visible: {
                     opacity: 1,
                     y: 0,
-                    transition: { duration: .61, ease: [.6, .05, -.01, .9] }
+                    transition: { duration: .6, ease: [.6, .05, -.01, .9] }
                 },
                 hidden: {
                     opacity: 0,

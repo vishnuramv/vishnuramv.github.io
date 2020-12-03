@@ -24,7 +24,7 @@ const globalReducer = (state, action) => {
 }
 
 const initialState = {
-    isDark: window.localStorage.getItem('theme') === "false" ? false : true,
+    isDark: (typeof window !== `undefined`) ? (window.localStorage.getItem('theme') === "false" ? false : true) : true,
     cursorType: null,
     cursorStyles: ['cursorRed', "cursorTheme", "Locked"]
 }

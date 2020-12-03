@@ -94,7 +94,7 @@ const Banner = ({ onCursor }) => {
             y: 0,
             opacity: 1,
             transition: {
-                duration: 1,
+                duration: 0.6,
                 ease: [.6, .05, -.01, .9]
             },
         },
