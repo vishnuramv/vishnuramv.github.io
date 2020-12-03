@@ -1,7 +1,6 @@
 import { useAnimation } from 'framer-motion';
 import React, { useEffect, useState } from 'react'
 import { useInView } from 'react-intersection-observer';
-import useWindowSize from '../../hooks/useWindowSize';
 import { Container } from '../styles/GlobalComponents'
 import { Project, ProjectContainer, ProjectRow, ProjectContent, ProjectButtons, ProjectButton, ProjectTitle, ProjectHead } from '../styles/HomeComponents'
 
@@ -11,7 +10,6 @@ const Projects = () => {
         triggerOnce: true,
         rootMargin: '-70px',
     });
-    const [tap, setTap] = useState(true)
     useEffect(() => {
         if (inView) {
             Animation.start('visible')

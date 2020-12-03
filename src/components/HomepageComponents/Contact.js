@@ -3,7 +3,6 @@ import { Container, Flex } from '../styles/GlobalComponents'
 import { ContactContent, ContactForm, ContactSection, ContactTitle, ContactText, ContactButton, ContactSent } from '../styles/HomeComponents';
 import { motion, useAnimation } from 'framer-motion'
 import db from '../../firebase';
-import { firestore } from 'firebase'
 import { useInView } from 'react-intersection-observer';
 
 const Contact = ({ onCursor }) => {

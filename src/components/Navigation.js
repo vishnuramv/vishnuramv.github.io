@@ -5,13 +5,9 @@ import { CloseNav, Nav, NavHeader, NavList, LogoNav, NavFooter } from './styles/
 import { motion, AnimatePresence } from 'framer-motion';
 import { useGlobalDispatchContext, useGlobalStateContext } from '../context/GlobalContext'
 import { Instagram, BrandLogo, Linkedin, Github, Medium, Devto } from '../assets/images/social-icons';
-import Footer from './Footer';
 import { FooterEmail, FooterIcons } from './styles/FooterComponents';
 
 export default function Navigation({ onCursor, toggleMenu, setToggleMenu }) {
-
-    const { isDark } = useGlobalStateContext();
-    const dispatch = useGlobalDispatchContext();
     const navRoute = [
         { id: 0, title: "About Me", path: "/#about", },
         { id: 1, title: "My Work", path: "/#projects", },

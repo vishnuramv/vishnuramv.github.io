@@ -1,19 +1,14 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import { Container, Flex } from './styles/GlobalComponents'
 import { HeaderNav, Logo, Menu } from './styles/HeaderComponents'
 import { Sun, Moon, BrandLogoDark, BrandLogoLight } from '../assets/images/social-icons'
 import { useGlobalDispatchContext, useGlobalStateContext } from '../context/GlobalContext'
 import { Link } from 'gatsby'
-import useElementPosition from '../hooks/useElementPosition';
 
 
 const Header = ({ onCursor, toggleMenu, setToggleMenu }) => {
     const { isDark } = useGlobalStateContext();
     const dispatch = useGlobalDispatchContext();
-    // const hamburger = useRef(null)
-    // const hamPosition = useElementPosition(hamburger)
-    // const themeToggle = useRef(null)
-    // const togglPosition = useElementPosition(themeToggle)
     return (
         <HeaderNav animate={{ y: 0, opacity: 1 }} initial={{ y: -72, opacity: 0 }} transition={{ duration: 1, ease: [.6, .05, -.01, 0.9] }}>
             <Container wider>

@@ -121,7 +121,7 @@ const Banner = ({ onCursor }) => {
             <Canvas width={size.width} height={size.height} ref={canvas} />
             <BannerContent>
                 <Flex fColumn variants={parent} initial="initial" animate="animate">
-                    <HeadLine variants={child}>Hi👋 I'm Vishnu Ram,</HeadLine>
+                    <HeadLine variants={child}>Hi<span role="img" aria-label="hand-wave">👋</span> I'm Vishnu Ram,</HeadLine>
                     <SubText variants={child}>I'm a Web Developer. I do Freelance work and I would love to <br /> Collaborate with you...</SubText>
                     <Buttons variants={child}>
                         <WorkButton whileHover={{ color: "#ea291e", backgroundColor: "#ffffff" }} href="/#projects">See My Work</WorkButton>
