@@ -68,7 +68,7 @@ const Projects = () => {
             <Container>
                 <ProjectRow>
                     <Project href="https://netflix-reactclone.web.app" target="_blank" flex1>
-                        <img src={require("../../assets/images/netflix.png")} alt="" />
+                        <img src={require("../../assets/images/netflix.png")} alt="Netflix Clone" />
                         <ProjectContent variants={parent} initial="initial" whileHover="animate">
                             <ProjectButtons variants={child}  >
                                 <ProjectButton whileHover={{ color: "red", backgroundColor: "#ffffff" }} href="https://netflix-reactclone.web.app" target="_blank">View Demo</ProjectButton>
@@ -78,7 +78,7 @@ const Projects = () => {
                         </ProjectContent>
                     </Project>
                     <Project href="https://whatsapp-clonereact.web.app" target="_blank">
-                        <img src={require("../../assets/images/whatsapp.png")} alt="" />
+                        <img src={require("../../assets/images/whatsapp.png")} alt="Whatsapp Clone" />
                         <ProjectContent variants={parent} initial="initial" whileHover="animate" dark>
                             <ProjectButtons variants={child} small>
                                 <ProjectButton whileHover={{ color: "red", backgroundColor: "#ffffff" }} href="https://whatsapp-clonereact.web.app/" target="_blank">View Demo</ProjectButton>
@@ -90,7 +90,7 @@ const Projects = () => {
                 </ProjectRow>
                 <ProjectRow>
                     <Project href="https://track-covid-react.web.app" target="_blank">
-                        <img src={require("../../assets/images/covid.png")} alt="" />
+                        <img src={require("../../assets/images/covid.png")} alt="Covid Tracker" />
                         <ProjectContent variants={parent} initial="initial" whileHover="animate" dark>
                             <ProjectButtons variants={child} small>
                                 <ProjectButton whileHover={{ color: "red", backgroundColor: "#ffffff" }} href="https://track-covid-react.web.app" target="_blank">View Demo</ProjectButton>
@@ -100,7 +100,7 @@ const Projects = () => {
                         </ProjectContent>
                     </Project>
                     <Project href="https://spotify-reactclone.web.app" target="_blank" flex1>
-                        <img src={require("../../assets/images/spotify.png")} alt="" />
+                        <img src={require("../../assets/images/spotify.png")} alt="Spotify Clone" />
                         <ProjectContent variants={parent} initial="initial" whileHover="animate">
                             <ProjectButtons variants={child} >
                                 <ProjectButton whileHover={{ color: "red", backgroundColor: "#ffffff" }} href="https://spotify-reactclone.web.app" target="_blank">View Demo</ProjectButton>
