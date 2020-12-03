@@ -19,7 +19,9 @@ const IndexPage = () => {
     })
   };
   useEffect(() => {
-    window.localStorage.setItem('theme', isDark);
+    if (typeof window !== `undefined`) {
+      window.localStorage.setItem('theme', isDark);
+    } 
   }, [isDark])
 
   // const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 })

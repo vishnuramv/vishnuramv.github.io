@@ -3,7 +3,6 @@ import React from 'react'
 import { Container, Flex } from './styles/GlobalComponents'
 import { CloseNav, Nav, NavHeader, NavList, LogoNav, NavFooter } from './styles/NavigationStyles'
 import { motion, AnimatePresence } from 'framer-motion';
-import { useGlobalDispatchContext, useGlobalStateContext } from '../context/GlobalContext'
 import { Instagram, BrandLogo, Linkedin, Github, Medium, Devto } from '../assets/images/social-icons';
 import { FooterEmail, FooterIcons } from './styles/FooterComponents';
 

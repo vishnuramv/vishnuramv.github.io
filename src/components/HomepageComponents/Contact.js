@@ -46,7 +46,7 @@ const Contact = ({ onCursor }) => {
 
     return (
         <ContactSection
-            id="about"
+            id="contact"
             ref={contactRef}
             animate={Animation}
             initial='hidden'

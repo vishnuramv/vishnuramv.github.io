@@ -1,5 +1,5 @@
 import { useAnimation } from 'framer-motion';
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useInView } from 'react-intersection-observer';
 import { Container } from '../styles/GlobalComponents'
 import { Project, ProjectContainer, ProjectRow, ProjectContent, ProjectButtons, ProjectButton, ProjectTitle, ProjectHead } from '../styles/HomeComponents'
