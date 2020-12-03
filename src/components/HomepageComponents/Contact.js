@@ -4,7 +4,8 @@ import { ContactContent, ContactForm, ContactSection, ContactTitle, ContactText,
 import { motion, useAnimation } from 'framer-motion'
 // import db from '../../firebase';
 import { useInView } from 'react-intersection-observer';
-import useFirebase from '../../hooks/useFirebase';
+// import useFirebase from '../../hooks/useFirebase';
+import firebase from "gatsby-plugin-firebase";
 
 const Contact = ({ onCursor }) => {
     const [input1, setInput1] = useState(false);
@@ -15,7 +16,7 @@ const Contact = ({ onCursor }) => {
     const [message, setMessage] = useState("");
     const [isSent, setIsSent] = useState(false);
     const [isEmpty, setIsEmpty] = useState(false);
-    const firebase = useFirebase();
+    // const firebase = useFirebase();
     const sendMessage = (e) => {
         e.preventDefault();
         if (name !== "" && email !== "" && message !== "") {
