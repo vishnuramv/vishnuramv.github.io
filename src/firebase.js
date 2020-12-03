@@ -10,7 +10,18 @@ const firebaseConfig = {
     measurementId: "G-HJW1D6HBFF"
 };
 
-const firebaseApp = firebase.initializeApp(firebaseConfig);
+let firebaseApp = null;
+
+export default function getFirebase() {
+    if (typeof window !== 'undefined') {
+        if (firebaseApp) return firebaseApp;
+        firebaseApp = firebase.initializeApp(firebaseConfig);
+        return firebaseApp;
+    }
+
+    return null;
+}
+
 
 const db = firebaseApp.firestore();
 export default db;

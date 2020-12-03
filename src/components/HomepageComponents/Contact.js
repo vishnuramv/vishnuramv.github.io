@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react'
 import { Container, Flex } from '../styles/GlobalComponents'
 import { ContactContent, ContactForm, ContactSection, ContactTitle, ContactText, ContactButton, ContactSent } from '../styles/HomeComponents';
 import { motion, useAnimation } from 'framer-motion'
-import db from '../../firebase';
+// import db from '../../firebase';
 import { useInView } from 'react-intersection-observer';
+import useFirebase from '../../hooks/useFirebase';
 
 const Contact = ({ onCursor }) => {
     const [input1, setInput1] = useState(false);
@@ -14,11 +15,11 @@ const Contact = ({ onCursor }) => {
     const [message, setMessage] = useState("");
     const [isSent, setIsSent] = useState(false);
     const [isEmpty, setIsEmpty] = useState(false);
-
+    const firebase = useFirebase();
     const sendMessage = (e) => {
         e.preventDefault();
         if (name !== "" && email !== "" && message !== "") {
-            db.collection('messages').add({
+            firebase.firestore().collection('messages').add({
                 name: name,
                 email: email,
                 message: message,
