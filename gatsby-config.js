@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: ``,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `Vishnu Ram - Rookie Dev | Web Developer | Freelancer`,
+    description: `Hi I'm Vishnu Ram, A Web developer from India. I learnt Game development as my hobby. I love to create thing and collaborate with other developers. Want to Hire or Collaborate with a web developer? Check out my works and contact me - vishnu.v1902@gmail.com.`,
     author: `@vishnuramv`,
   },
   plugins: [
@@ -10,7 +10,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/assets/images`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -24,7 +24,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/logo.png`, // This path is relative to the root of the site.
+        icon: `src/assets/images/logo.svg`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
