@@ -13,8 +13,8 @@ import {
     WorkButton,
     ResumeButton
 } from '../styles/HomeComponents';
-import useWindowSize from '../../hooks/useWindowSize';
-// import { useGlobalStateContext } from '../../context/GlobalContext';
+// import useWindowSize from '../../hooks/useWindowSize';
+import { useGlobalStateContext } from '../../context/GlobalContext';
 import { Flex } from '../styles/GlobalComponents';
 const Banner = ({ onCursor }) => {
     const canvas = useRef(null);
