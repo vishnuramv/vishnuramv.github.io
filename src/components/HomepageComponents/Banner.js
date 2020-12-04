@@ -31,7 +31,7 @@ const Banner = ({ onCursor }) => {
                 height: window.innerHeight,
             });
         }
-
+        handleResize();
         window.addEventListener('resize', handleResize);
 
         const renderingElement = canvas.current;
