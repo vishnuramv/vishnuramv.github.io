@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import {
     BannerContainer,
     BannerBackground,
@@ -13,27 +13,15 @@ import {
     WorkButton,
     ResumeButton
 } from '../styles/HomeComponents';
-// import useWindowSize from '../../hooks/useWindowSize';
+import useWindowSize from '../../hooks/useWindowSize';
 import { useGlobalStateContext } from '../../context/GlobalContext';
 import { Flex } from '../styles/GlobalComponents';
 const Banner = ({ onCursor }) => {
     const canvas = useRef(null);
-    // const size = useWindowSize();
+    const size = useWindowSize();
     const { isDark } = useGlobalStateContext();
-    const [windowSize, SetWindowSize] = useState({
-        width: (typeof window !== `undefined`) ? window.innerWidth : null,
-        height: (typeof window !== `undefined`) ? window.innerHeight : null,
-    });
-    useEffect(() => {
-        const handleResize = () => {
-            SetWindowSize({
-                width: window.innerWidth,
-                height: window.innerHeight,
-            });
-        }
-        handleResize();
-        window.addEventListener('resize', handleResize);
 
+    useEffect(() => {
         const renderingElement = canvas.current;
         const drawingElement = renderingElement.cloneNode();
 
@@ -45,7 +33,7 @@ const Banner = ({ onCursor }) => {
         let isMoving = false;
         renderingCtx.globalCompositeOperation = "source-over";
         renderingCtx.fillStyle = isDark ? "#000000" : "#ffffff";
-        renderingCtx.fillRect(0, 0, windowSize.width, windowSize.height);
+        renderingCtx.fillRect(0, 0, size.width, size.height);
         // renderingCtx.font = "120px Roboto";
         // renderingCtx.fillStyle = "white";
         // renderingCtx.fillText("Hello World", size.width / 3, size.height / 2);
@@ -84,8 +72,7 @@ const Banner = ({ onCursor }) => {
                 renderingCtx.drawImage(drawingElement, 0, 0)
             }
         })
-        return () => window.removeEventListener('resize', handleResize);
-    }, [isDark, windowSize.width, windowSize.height]);
+    }, [isDark, size.width, size.height]);
 
     const parent = {
         initial: { scaleY: 1 },
@@ -131,7 +118,7 @@ const Banner = ({ onCursor }) => {
                     <BannerImage style={{ backgroundImage: `url(${require("../../assets/images/pic6.jpg")})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover' }} />
                 </BannerBottom>
             </BannerBackground>
-            <Canvas width={windowSize.width} height={windowSize.height} ref={canvas} />
+            <Canvas width={size.width} height={size.height} ref={canvas} />
             <BannerContent>
                 <Flex fColumn variants={parent} initial="initial" animate="animate">
                     <HeadLine variants={child}>Hi<span role="img" aria-label="hand-wave">👋</span> I'm Vishnu Ram,</HeadLine>
