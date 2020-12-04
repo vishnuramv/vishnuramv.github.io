@@ -18,10 +18,10 @@ import { useGlobalStateContext } from '../../context/GlobalContext';
 import { Flex } from '../styles/GlobalComponents';
 const Banner = ({ onCursor }) => {
     const canvas = useRef(null);
-    const size = useWindowSize();
     const { isDark } = useGlobalStateContext();
-
+    
     useEffect(() => {
+        const size = useWindowSize();
         const renderingElement = canvas.current;
         const drawingElement = renderingElement.cloneNode();
 
