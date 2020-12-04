@@ -19,9 +19,9 @@ import { Flex } from '../styles/GlobalComponents';
 const Banner = ({ onCursor }) => {
     const canvas = useRef(null);
     const { isDark } = useGlobalStateContext();
-    
+
+    const size = useWindowSize();
     useEffect(() => {
-        const size = useWindowSize();
         const renderingElement = canvas.current;
         const drawingElement = renderingElement.cloneNode();
 
@@ -72,7 +72,7 @@ const Banner = ({ onCursor }) => {
                 renderingCtx.drawImage(drawingElement, 0, 0)
             }
         })
-    }, [isDark]);
+    }, [isDark, size.width, size.height]);
 
     const parent = {
         initial: { scaleY: 1 },
