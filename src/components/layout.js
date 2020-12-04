@@ -4,7 +4,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import { normalize } from 'styled-normalize';
 import { useGlobalStateContext } from "../context/GlobalContext";
-import './styles/fonts.css'
+// import './styles/fonts.css'
+import { Helmet } from "react-helmet";
 import CustomCursor from "./CustomCursor";
 import Header from "./Header";
 import Navigation from "./Navigation";
@@ -70,6 +71,10 @@ const Layout = ({ children, cursorPosition, onCursor, toggleMenu, setToggleMenu 
 
   return (
     <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
+      <Helmet>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+Pro&display=swap" rel="stylesheet" />
+      </Helmet>
       <GlobalStyle />
       <CustomCursor toggleMenu={toggleMenu} />
       <Header onCursor={onCursor} toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} />
