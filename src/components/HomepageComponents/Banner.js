@@ -118,7 +118,7 @@ const Banner = ({ onCursor }) => {
                     <BannerImage style={{ backgroundImage: `url(${require("../../assets/images/pic6.jpg")})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover' }} />
                 </BannerBottom>
             </BannerBackground>
-            <Canvas width={size.width} height={size.height} ref={canvas} />
+            <Canvas ref={canvas} />
             <BannerContent>
                 <Flex fColumn variants={parent} initial="initial" animate="animate">
                     <HeadLine variants={child}>Hi<span role="img" aria-label="hand-wave">👋</span> I'm Vishnu Ram,</HeadLine>
