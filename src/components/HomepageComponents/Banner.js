@@ -116,7 +116,6 @@ const Banner = ({ onCursor }) => {
                     <BannerImage style={{ backgroundImage: `url(${require("../../assets/images/pic1.jpg")})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'bottom', backgroundSize: 'cover' }} />
                     <BannerImage style={{ backgroundImage: `url(${require("../../assets/images/pic6.jpg")})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover' }} />
                 </BannerBottom>
-                Hello
             </BannerBackground>
             <Canvas width={size.width} height={size.height} ref={canvas} />
             <BannerContent>
