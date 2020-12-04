@@ -72,7 +72,7 @@ const Banner = ({ onCursor }) => {
                 renderingCtx.drawImage(drawingElement, 0, 0)
             }
         })
-    }, [isDark, size.width, size.height]);
+    }, [isDark]);
 
     const parent = {
         initial: { scaleY: 1 },
