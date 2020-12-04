@@ -50,8 +50,8 @@ export const Canvas = styled.canvas`
     top: 0;
     left: 0;
     height: 100%;
-    max-width: 100vw !important;
     width: 100% !important;
+    max-width: 100vw !important;
     display: block;
 `;
 
