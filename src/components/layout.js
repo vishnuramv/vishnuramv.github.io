@@ -80,7 +80,7 @@ const Layout = ({ children, cursorPosition, onCursor, toggleMenu, setToggleMenu 
       <Header onCursor={onCursor} toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} />
       <Navigation onCursor={onCursor} toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} />
       <main>{children}</main>
-      <Footer />
+      <Footer onCursor={onCursor} />
     </ThemeProvider>
   )
 }

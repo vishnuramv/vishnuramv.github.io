@@ -30,7 +30,7 @@ const IndexPage = () => {
       <SEO title="Home" />
       <Banner onCursor={onCursor} />
       <About onCursor={onCursor} />
-      <Projects />
+      <Projects onCursor={onCursor} />
       <Contact onCursor={onCursor} />
     </Layout>
   )
