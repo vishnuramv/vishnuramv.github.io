@@ -10,57 +10,57 @@ export const BannerContainer = styled(motion.div)`
     /* margin-bottom: 296px; */
 `;
 
-export const BannerBackground = styled.div`
-    height: 100vh;
-    width: 100%;
-    overflow: hidden !important;
-`;
+// export const BannerBackground = styled.div`
+//     height: 100vh;
+//     width: 100%;
+//     overflow: hidden !important;
+// `;
 
-export const BannerTop = styled.div`
-    height: 50vh;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    @media (max-width: 770px) {
-        display: none;
-    }
-`;
-export const BannerBottom = styled.div`
-    height: 50vh;
-    width: 100%;
-    display: flex;
-    @media (max-width: 770px) {
-        height: 100vh;
-        flex-wrap: wrap !important;
-    }
-`;
+// export const BannerTop = styled.div`
+//     height: 50vh;
+//     width: 100%;
+//     display: flex;
+//     flex-wrap: wrap;
+//     @media (max-width: 770px) {
+//         display: none;
+//     }
+// `;
+// export const BannerBottom = styled.div`
+//     height: 50vh;
+//     width: 100%;
+//     display: flex;
+//     @media (max-width: 770px) {
+//         height: 100vh;
+//         flex-wrap: wrap !important;
+//     }
+// `;
 
-export const BannerImage = styled.div`
-    height: 100%;
-    flex: 1;
-    min-width: 200px;
-    /* width: 100%; */
-    /* background-image: ${props => props.imgUrl}; */
-    box-shadow: inset 0 0px 400px ${props => props.theme.background};
-    max-height: 50vh;
-`;
+// export const BannerImage = styled.div`
+//     height: 100%;
+//     flex: 1;
+//     min-width: 200px;
+//     /* width: 100%; */
+//     /* background-image: ${props => props.imgUrl}; */
+//     box-shadow: inset 0 0px 400px ${props => props.theme.background};
+//     max-height: 50vh;
+// `;
 
-export const Canvas = styled.canvas`
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100% !important;
-    max-width: 100vw !important;
-    min-height:100vh !important;
-    min-width: 100vw !important;
-    display: block;
-`;
+// export const Canvas = styled.canvas`
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     height: 100%;
+//     width: 100% !important;
+//     max-width: 100vw !important;
+//     min-height:100vh !important;
+//     min-width: 100vw !important;
+//     display: block;
+// `;
 
 export const BannerContent = styled(motion.div)`
-    position: absolute;
+    /* position: absolute;
     top: 0;
-    left: 0;
+    left: 0; */
     height: 100%;
     width: 100%;
     display: flex;

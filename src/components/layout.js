@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import { normalize } from 'styled-normalize';
-import { useGlobalStateContext } from "../context/GlobalContext";
+// import { useGlobalStateContext } from "../context/GlobalContext";
 // import './styles/fonts.css'
 import { Helmet } from "react-helmet";
 import CustomCursor from "./CustomCursor";
@@ -65,12 +65,12 @@ const Layout = ({ children, cursorPosition, onCursor, toggleMenu, setToggleMenu 
     // top: `${cursorPosition.y}px`
   }
 
-  const { isDark } = useGlobalStateContext();
+  // const { isDark } = useGlobalStateContext();
 
 
 
   return (
-    <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
+    <ThemeProvider theme={darkTheme}>
       <Helmet>
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+Pro&display=swap" rel="stylesheet" />

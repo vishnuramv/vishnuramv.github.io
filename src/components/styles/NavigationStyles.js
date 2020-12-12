@@ -22,6 +22,9 @@ export const NavHeader = styled.div`
     h2 {
         color: ${props => props.theme.background};
     }
+    @media (max-width: 770px) {
+        top: 56px
+    }
 `;
 export const LogoNav = styled.div`
     svg {
@@ -81,10 +84,11 @@ export const NavList = styled.div`
 
 export const CloseNav = styled.div`
     button {
+        margin-left: 45%;
         transform-origin: center;
         background-color: transparent;
         border: none;
-        padding: 20px;
+        /* padding: 20px; */
         outline: none;
         span {
             width: 30px;
@@ -93,6 +97,11 @@ export const CloseNav = styled.div`
             display: block;
             background: ${props => props.theme.background};
             margin: 8px
+        }
+    }
+    @media (max-width: 420px) {
+        button {
+            margin-left: 25%;
         }
     }
 `;

@@ -52,8 +52,8 @@ export default function Navigation({ onCursor, toggleMenu, setToggleMenu }) {
         <AnimatePresence>
             {toggleMenu && (
                 <Nav initial={{ x: '-100%', scaleX: 0 }} exit={{ x: '-100%', scaleX: 0 }} animate={{ x: toggleMenu ? '0%' : '-100%', scaleX: toggleMenu ? 1 : 0 }} transition={{ duration: .8, ease: [.6, .05, -.01, .9] }}>
-                    <Container>
-                        <NavHeader>
+                    <Container wider>
+                    <NavHeader>
                             <Flex spaceBetween noHeight>
                                 <LogoNav onMouseEnter={() => onCursor("cursorTheme")} onMouseLeave={onCursor}>
                                     <Link to="/">
@@ -67,7 +67,7 @@ export default function Navigation({ onCursor, toggleMenu, setToggleMenu }) {
                                     </button>
                                 </CloseNav>
                             </Flex>
-                        </NavHeader>
+                    </NavHeader>
                         <NavList>
                             <ul>
                                 {navRoute.map(route => (

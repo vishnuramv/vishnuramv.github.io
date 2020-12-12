@@ -2,29 +2,29 @@ import React from 'react'
 import { Container, Flex } from './styles/GlobalComponents'
 import { HeaderNav, Logo, Menu } from './styles/HeaderComponents'
 import { Sun, Moon, BrandLogoDark, BrandLogoLight } from '../assets/images/social-icons'
-import { useGlobalDispatchContext, useGlobalStateContext } from '../context/GlobalContext'
+// import { useGlobalDispatchContext, useGlobalStateContext } from '../context/GlobalContext'
 import { Link } from 'gatsby'
 
 
 const Header = ({ onCursor, toggleMenu, setToggleMenu }) => {
-    const { isDark } = useGlobalStateContext();
-    const dispatch = useGlobalDispatchContext();
+    // const { isDark } = useGlobalStateContext();
+    // const dispatch = useGlobalDispatchContext();
     return (
         <HeaderNav animate={{ y: 0, opacity: 1 }} initial={{ y: -72, opacity: 0 }} transition={{ duration: 1, ease: [.6, .05, -.01, 0.9] }}>
             <Container wider>
                 <Flex spaceBetween noHeight>
                     <Logo onMouseEnter={() => onCursor("cursorRed")} onMouseLeave={onCursor}>
                         <Link to="/">
-                            {isDark ? (
-                                <BrandLogoDark />
+                            <BrandLogoDark />
+                            {/* {isDark ? (
                             ) : (
                                     <BrandLogoLight />
-                                )}
+                                )} */}
                         </Link>
                     </Logo>
                     <Menu>
                         <Flex alignCenter>
-                            {isDark ? (
+                            {/* {isDark ? (
                                 <div
                                     // ref={themeToggle}
                                     onClick={() => dispatch({
@@ -55,7 +55,7 @@ const Header = ({ onCursor, toggleMenu, setToggleMenu }) => {
                                         <Moon />
                                     </div>
                                 )}
-                            {/* <Sun /> */}
+                            <Sun /> */}
                             <button
                                 // ref={hamburger}
                                 onClick={() => setToggleMenu(!toggleMenu)}

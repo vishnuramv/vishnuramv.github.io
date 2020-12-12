@@ -113,7 +113,7 @@ const About = ({ onCursor }) => {
 
 
 const Accordion = ({ data, expanded, setExpanded, onCursor }) => {
-    const { isDark } = useGlobalStateContext();
+    // const { isDark } = useGlobalStateContext();
     const isOpened = data.id === expanded;
     const [hovered, setHovered] = useState(false);
     return (
@@ -125,7 +125,7 @@ const Accordion = ({ data, expanded, setExpanded, onCursor }) => {
                 onHoverStart={() => setHovered(!hovered)}
                 onHoverEnd={() => setHovered(!hovered)}
                 whileHover={{
-                    color: isDark ? '#ffffff' : '#000000'
+                    color: '#ffffff'
                 }}
             >
                 <AccordionIcon>

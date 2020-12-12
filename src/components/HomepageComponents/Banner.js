@@ -1,11 +1,11 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import {
     BannerContainer,
-    BannerBackground,
-    BannerTop,
-    BannerBottom,
-    BannerImage,
-    Canvas,
+    // BannerBackground,
+    // BannerTop,
+    // BannerBottom,
+    // BannerImage,
+    // Canvas,
     BannerContent,
     HeadLine,
     SubText,
@@ -13,66 +13,66 @@ import {
     WorkButton,
     ResumeButton
 } from '../styles/HomeComponents';
-import useWindowSize from '../../hooks/useWindowSize';
-import { useGlobalStateContext } from '../../context/GlobalContext';
+// import useWindowSize from '../../hooks/useWindowSize';
+// import { useGlobalStateContext } from '../../context/GlobalContext';
 import { Flex } from '../styles/GlobalComponents';
 const Banner = ({ onCursor }) => {
-    const canvas = useRef(null);
-    const { isDark } = useGlobalStateContext();
+    // const canvas = useRef(null);
+    // const { isDark } = useGlobalStateContext();
 
-    const size = useWindowSize();
-    useEffect(() => {
-        const renderingElement = canvas.current;
-        const drawingElement = renderingElement.cloneNode();
+    // const size = useWindowSize();
+    // useEffect(() => {
+    //     const renderingElement = canvas.current;
+    //     const drawingElement = renderingElement.cloneNode();
 
-        const drawingCtx = drawingElement.getContext('2d');
-        const renderingCtx = renderingElement.getContext('2d');
+    //     const drawingCtx = drawingElement.getContext('2d');
+    //     const renderingCtx = renderingElement.getContext('2d');
 
-        let lastX;
-        let lastY;
-        let isMoving = false;
-        renderingCtx.globalCompositeOperation = "source-over";
-        renderingCtx.fillStyle = isDark ? "#000000" : "#ffffff";
-        renderingCtx.fillRect(0, 0, size.width, size.height);
-        // renderingCtx.font = "120px Roboto";
-        // renderingCtx.fillStyle = "white";
-        // renderingCtx.fillText("Hello World", size.width / 3, size.height / 2);
-        renderingElement.addEventListener("mouseover", e => {
-            isMoving = true
-            lastX = e.pageX - renderingElement.offsetLeft
-            lastY = e.pageY - renderingElement.offsetTop
-        });
+    //     let lastX;
+    //     let lastY;
+    //     let isMoving = false;
+    //     renderingCtx.globalCompositeOperation = "source-over";
+    //     renderingCtx.fillStyle = isDark ? "#000000" : "#ffffff";
+    //     renderingCtx.fillRect(0, 0, size.width, size.height);
+    //     // renderingCtx.font = "120px Roboto";
+    //     // renderingCtx.fillStyle = "white";
+    //     // renderingCtx.fillText("Hello World", size.width / 3, size.height / 2);
+    //     renderingElement.addEventListener("mouseover", e => {
+    //         isMoving = true
+    //         lastX = e.pageX - renderingElement.offsetLeft
+    //         lastY = e.pageY - renderingElement.offsetTop
+    //     });
 
-        renderingElement.addEventListener("click", e => {
-            isMoving = true
-            lastX = e.pageX - renderingElement.offsetLeft
-            lastY = e.pageY - renderingElement.offsetTop
-        });
+    //     renderingElement.addEventListener("click", e => {
+    //         isMoving = true
+    //         lastX = e.pageX - renderingElement.offsetLeft
+    //         lastY = e.pageY - renderingElement.offsetTop
+    //     });
 
-        renderingElement.addEventListener("mouseup", e => {
-            isMoving = false
-            lastX = e.pageX - renderingElement.offsetLeft
-            lastY = e.pageY - renderingElement.offsetTop
-        });
+    //     renderingElement.addEventListener("mouseup", e => {
+    //         isMoving = false
+    //         lastX = e.pageX - renderingElement.offsetLeft
+    //         lastY = e.pageY - renderingElement.offsetTop
+    //     });
 
-        renderingElement.addEventListener("mousemove", e => {
-            if (isMoving) {
-                drawingCtx.globalCompositeOperation = "source-over"
-                renderingCtx.globalCompositeOperation = "destination-out"
-                const currentX = e.pageX - renderingElement.offsetLeft
-                const currentY = e.pageY - renderingElement.offsetTop
-                drawingCtx.lineJoin = "round"
-                drawingCtx.moveTo(lastX, lastY)
-                drawingCtx.lineTo(currentX, currentY)
-                drawingCtx.closePath()
-                drawingCtx.lineWidth = 80
-                drawingCtx.stroke()
-                lastX = currentX
-                lastY = currentY
-                renderingCtx.drawImage(drawingElement, 0, 0)
-            }
-        })
-    }, [isDark, size.width, size.height]);
+    //     renderingElement.addEventListener("mousemove", e => {
+    //         if (isMoving) {
+    //             drawingCtx.globalCompositeOperation = "source-over"
+    //             renderingCtx.globalCompositeOperation = "destination-out"
+    //             const currentX = e.pageX - renderingElement.offsetLeft
+    //             const currentY = e.pageY - renderingElement.offsetTop
+    //             drawingCtx.lineJoin = "round"
+    //             drawingCtx.moveTo(lastX, lastY)
+    //             drawingCtx.lineTo(currentX, currentY)
+    //             drawingCtx.closePath()
+    //             drawingCtx.lineWidth = 80
+    //             drawingCtx.stroke()
+    //             lastX = currentX
+    //             lastY = currentY
+    //             renderingCtx.drawImage(drawingElement, 0, 0)
+    //         }
+    //     })
+    // }, [isDark, size.width, size.height]);
 
     const parent = {
         initial: { scaleY: 1 },
@@ -102,7 +102,7 @@ const Banner = ({ onCursor }) => {
     }
     return (
         <BannerContainer onMouseEnter={() => onCursor("cursorRed")} onMouseLeave={onCursor}>
-            <BannerBackground>
+            {/* <BannerBackground>
                 <BannerTop>
                     <BannerImage style={{ backgroundImage: `url(${require("../../assets/images/pic10.jpg")})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover' }} />
                     <BannerImage style={{ backgroundImage: `url(${require("../../assets/images/pic2.jpeg")})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }} />
@@ -117,8 +117,8 @@ const Banner = ({ onCursor }) => {
                     <BannerImage style={{ backgroundImage: `url(${require("../../assets/images/pic1.jpg")})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'bottom', backgroundSize: 'cover' }} />
                     <BannerImage style={{ backgroundImage: `url(${require("../../assets/images/pic6.jpg")})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover' }} />
                 </BannerBottom>
-            </BannerBackground>
-            <Canvas width={size.width} height={size.height} ref={canvas} />
+            </BannerBackground> */}
+            {/* <Canvas width={size.width} height={size.height} ref={canvas} /> */}
             <BannerContent>
                 <Flex fColumn variants={parent} initial="initial" animate="animate">
                     <HeadLine variants={child}>Hi<span role="img" aria-label="hand-wave">👋</span> I'm Vishnu Ram,</HeadLine>

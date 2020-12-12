@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import About from "../components/HomepageComponents/About"
 import Banner from "../components/HomepageComponents/Banner"
 import Contact from "../components/HomepageComponents/Contact"
@@ -8,7 +8,7 @@ import SEO from "../components/seo"
 import { useGlobalDispatchContext, useGlobalStateContext } from "../context/GlobalContext"
 
 const IndexPage = () => {
-  const { isDark, cursorStyles } = useGlobalStateContext();
+  const { cursorStyles } = useGlobalStateContext();
   const dispatch = useGlobalDispatchContext();
   const [toggleMenu, setToggleMenu] = useState(false);
   const onCursor = (cursorType) => {
@@ -18,11 +18,11 @@ const IndexPage = () => {
       cursorType: cursorType
     })
   };
-  useEffect(() => {
-    if (typeof window !== `undefined`) {
-      window.localStorage.setItem('theme', isDark);
-    } 
-  }, [isDark])
+  // useEffect(() => {
+  //   if (typeof window !== `undefined`) {
+  //     window.localStorage.setItem('theme', isDark);
+  //   } 
+  // }, [isDark])
 
   // const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 })
   return (

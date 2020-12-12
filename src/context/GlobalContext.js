@@ -6,11 +6,11 @@ const GlobalDispatchContext = createContext();
 const globalReducer = (state, action) => {
     console.log(action)
     switch (action.type) {
-        case "TOGGLE_THEME":
-            return {
-                ...state,
-                isDark: action.theme
-            }
+        // case "TOGGLE_THEME":
+        //     return {
+        //         ...state,
+        //         isDark: action.theme
+        //     }
         case "CURSOR_TYPE":
             return {
                 ...state,
@@ -24,7 +24,7 @@ const globalReducer = (state, action) => {
 }
 
 const initialState = {
-    isDark: (typeof window !== `undefined`) ? (window.localStorage.getItem('theme') === "false" ? false : true) : true,
+    // isDark: (typeof window !== `undefined`) ? (window.localStorage.getItem('theme') === "false" ? false : true) : true,
     cursorType: null,
     cursorStyles: ['cursorRed', "cursorTheme", "Locked"]
 }
