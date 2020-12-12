@@ -3,6 +3,8 @@ module.exports = {
     title: `Vishnu Ram - Rookie Dev | Web Developer | Freelancer`,
     description: `Hi I'm Vishnu Ram, I'm A Rookie Dev and A Passionate Web developer from India. I love to create new things and collaborate with other developers. Want to Hire or Collaborate with me? Check out my works and contact me - vishnu.v1902@gmail.com.`,
     author: `@vishnuramv`,
+    twitterUsername: "@vvishnu__",
+    url: "https://vishnuramv.github.io",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
