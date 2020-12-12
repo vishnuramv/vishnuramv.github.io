@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Vishnu Ram - Rookie Dev | Web Developer | Freelancer`,
-    description: `Hi I'm Vishnu Ram, I'm A Rookie Dev and A Passionate Web developer from India. I love to create thing and collaborate with other developers. Want to Hire or Collaborate with a web developer? Check out my works and contact me - vishnu.v1902@gmail.com.`,
+    description: `Hi I'm Vishnu Ram, I'm A Rookie Dev and A Passionate Web developer from India. I love to create new things and collaborate with other developers. Want to Hire or Collaborate with a web developer? Check out my works and contact me - vishnu.v1902@gmail.com.`,
     author: `@vishnuramv`,
   },
   plugins: [
