@@ -85,7 +85,7 @@ const About = ({ onCursor }) => {
                 <Flex className="AboutFlex" alignTop >
                     <AboutContent>
                         <h2>
-                            I'm a <Span>Rookie Dev</Span> and<br /> <Span>Passionate Web Developer,</Span> familiar with a wide range of programming knowledge.
+                            I'm a <Span>Rookie Dev</Span> and<br /> <Span>Passionate Web Developer,</Span> familiar with a wide range of languages and frameworks.
                         </h2>
                         <p>
                             I see myself as a collaborative team player with excellent technical abilities like finding solutions to challenges and focused on customer satisfaction. I'm also an undergraduate <b>Computer Science</b> student. I learned <i>game development</i> and <i>3D modelling</i> as a hobby and I also listen to podcasts. <b>Fun fact:</b> I'm a dog person without a dog.
