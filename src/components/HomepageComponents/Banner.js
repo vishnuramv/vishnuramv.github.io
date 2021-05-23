@@ -125,7 +125,7 @@ const Banner = ({ onCursor }) => {
                     <SubText variants={child}>I'm a Web Developer. I do Freelance work and I would love to <br /> Collaborate with you...</SubText>
                     <Buttons variants={child}>
                         <WorkButton whileHover={{ color: "#ea291e", backgroundColor: "#ffffff" }} href="/#projects">See My Work</WorkButton>
-                        <ResumeButton whileHover={{ color: "#ffffff", backgroundColor: "#ea291e" }} href="https://drive.google.com/file/d/1DcOeWxL-S2DuCjMD30zr3aLqzNJ8ZcDX/view?usp=sharing" target="_blank">See My Resume</ResumeButton>
+                        <ResumeButton whileHover={{ color: "#ffffff", backgroundColor: "#ea291e" }} href="https://drive.google.com/file/d/1abaVab53G8B3jUYOVt4w6al5cPcMpSvO/view?usp=sharing" target="_blank">See My Resume</ResumeButton>
                     </Buttons>
                 </Flex>
             </BannerContent>
